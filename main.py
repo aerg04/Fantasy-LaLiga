@@ -6,7 +6,9 @@ import json
 class Main:
     @staticmethod
     def main():
+        #Scrap.getPlayersUrl()
         Main.savePlayersData()
+        Main.insight()
         pass
     
     @staticmethod
@@ -18,7 +20,8 @@ class Main:
             data_list = []
             for url in urls:
                 player_info = Scrap.getPlayersInfo(url)
-                data_list.append(player_info)
+                if(player_info != None):
+                    data_list.append(player_info)
             with lock:
                 playersdata.extend(data_list)
 
@@ -54,7 +57,8 @@ class Main:
             predf.append(dictplayers)
             dictplayers = {}
         
-        Stats.querys(predf)
-
+        Stats.excel(predf)
+        Stats.saveAllPlayer(predf)
+        
 if __name__ == "__main__":
     Main.main()
