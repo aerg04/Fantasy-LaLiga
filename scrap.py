@@ -59,8 +59,12 @@ class Scrap:
                     points.append(int(str(span.text).replace('\n', '').strip()))
                 except:
                     points.append(0)
-            #print([team,name,position,points])
-            return [team,name,position,points]
+            #encontrar tendencia
+            if(sum(points[3:]) > 12):
+                trend = "upward"
+            else:
+                trend = "downward"
+            return [team,name,position,trend,points]
         except Exception as e:
             logging.exception(url)
         
@@ -156,6 +160,7 @@ class Scrap:
         gamesperteam = {}
         #print(len(games))
         #devuelve un diccionario con los equipos como keys y una lista de sus partidos como value
+        #print(games)
         for i in games:
             if(i["equipo_local"] in gamesperteam):
                 gamesperteam[i["equipo_local"]].append(i)
@@ -194,11 +199,16 @@ class Scrap:
         request = requests.get("https://www.lavanguardia.com/deportes/resultados/laliga-primera-division/calendario")
         soup = BeautifulSoup(request.content, 'html.parser')
         #listas de jornadas
-        #games = soup.find_all("div",class_="col-md-6 col-xs-12")
+        games = soup.find_all("div",class_="col-md-6 col-xs-12")
+        valid_games = Scrap.filterGames(games,"h")
         gamesdict = []
-        Scrap.getNext(soup,gamesdict)
-      
-        return Scrap.calPoints(gamesdict)
+        for i in valid_games:
+            Scrap.getNext(i,gamesdict)
+        games = []
+        for i in gamesdict:
+            if(i not in games):
+                games.append(i)
+        return Scrap.calPoints(games)
     
     @staticmethod
     def getNext(soup: BeautifulSoup, gamelist: list):
@@ -220,21 +230,26 @@ class Scrap:
                     "equipo_local": equipo_local,
                     "equipo_visitante": equipo_visitante,
                 })
+    
+    @staticmethod
+    def getPredictions():
+        output = Scrap.getLastFiveGames()
+        team_summary = Scrap.getTeamPointsSummary(output)
+        
+        team_nextgames = Scrap.getNextGames()
+        #print(team_nextgames)
+        output = []
+        for team, games in team_nextgames.items():
+            predicts =[team]
+            for game in games:
+                if game["equipo_local"] == team:
+                    predicts.append({str(game):team_summary[game["equipo_local"]]-team_summary[game["equipo_visitante"]]})
+                else:
+                    predicts.append({str(game):team_summary[game["equipo_visitante"]]-team_summary[game["equipo_local"]]})
+            output.append(predicts)
+
+        with open("files/predict.txt", "w",encoding="utf-8") as f:
+            f.write(json.dumps(output,indent=2,ensure_ascii=False))
 
 if __name__ == "__main__":
-    output = Scrap.getLastFiveGames()
-    team_summary = Scrap.getTeamPointsSummary(output)
-    
-    team_nextgames = Scrap.getNextGames()
-    output = []
-    for team, games in team_nextgames.items():
-        predicts =[team]
-        for game in games:
-            if game["equipo_local"] == team:
-                predicts.append(team_summary[game["equipo_local"]]-team_summary[game["equipo_visitante"]])
-            else:
-                predicts.append(team_summary[game["equipo_visitante"]]-team_summary[game["equipo_local"]])
-        output.append(predicts)
-
-    with open("files/predict.txt", "w",encoding="utf-8") as f:
-        f.write(json.dumps(output,indent=2,ensure_ascii=False))
+    print(Scrap.getPlayersInfo("https://www.futbolfantasy.com/jugadores/diego-lopez-1"))

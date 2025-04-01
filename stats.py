@@ -32,29 +32,28 @@ class Stats:
     @staticmethod
     def querys(data:list):
         df = pd.DataFrame(data)
-        with open("files/output.txt","w", encoding="utf-8") as file:
-
-            file.write(str(df.query("count > 5 and `50%` >= 4.5 and position == 'DEF'").sort_values(by=["relative_deviation","count"], ascending=[True,False])) + "\n")
-            file.write(str(df.query("count > 5 and `50%` >= 4.5 and position == 'MED'").sort_values(by=["relative_deviation","count"], ascending=[True,False])) + "\n")
-            file.write(str(df.query("count > 5 and `50%` >= 4.5 and position == 'DEL'").sort_values(by=["relative_deviation","count"], ascending=[True,False])) + "\n")
+        # with open("files/output.txt","w", encoding="utf-8") as file:
+        #     #file.write(str(df.query("count > 5 and `50%` >= 4.5 and position == 'DEF'").sort_values(by=["relative_deviation","count"], ascending=[True,False])) + "\n")
+        #     file.write(str(df.to_csv("files/players.csv",index=True)) + "\n")
+        df.to_csv("files/players.csv",index=True)
         # print(df.query("count > 5 and `50%` >= 5 and position == 'MED'").sort_values(by=["relative_deviation","count"], ascending=[True,False])[["name","relative_deviation"]])
         # print(df.query("count > 5 and `50%` >= 5 and position == 'DEF'").sort_values(by=["relative_deviation","count"], ascending=[True,False])["name"])
         # print(df.query("count > 5 and `50%` >= 5 and position == 'DEL'").sort_values(by=["relative_deviation","count"], ascending=[True,False])["name"])
 
-        df = df.query("name == ['Logan Costa','Pablo Maffeo','Thibaut Courtois','Brais Méndez','Sergi Darder','Aurélien Tchouaméni','Raphinha','Ayoze Pérez','Gorka Guruzeta','Antonio Rüdiger','Luis Milla']")
+        # df = df.query("name == ['Logan Costa','Pablo Maffeo','Thibaut Courtois','Brais Méndez','Sergi Darder','Aurélien Tchouaméni','Raphinha','Ayoze Pérez','Gorka Guruzeta','Antonio Rüdiger','Luis Milla']")
         
-        #df = df.sort_values(by=["relative_deviation","count"], ascending=[True,False])
+        # #df = df.sort_values(by=["relative_deviation","count"], ascending=[True,False])
 
-        print("media",df["mean"].sum())
-        print("mediana",df["50%"].sum())
+        # print("media",df["mean"].sum())
+        # print("mediana",df["50%"].sum())
 
-        sum_var =0
-        for i in df["std"]:
-            sum_var += i*i
-        print(sum_var)
+        # sum_var =0
+        # for i in df["std"]:
+        #     sum_var += i*i
+        # print(sum_var)
 
     @staticmethod
-    def excel(data:list):
+    def saveBestPlayersCsv(data:list):
         df = pd.DataFrame(data)
         defen = df.query("count > 5 and `50%` >= 4.5 and position == 'DEF'").sort_values(by=["relative_deviation","count"], ascending=[True,False])
         mid = df.query("count > 5 and `50%` >= 4.5 and position == 'MED'").sort_values(by=["relative_deviation","count"], ascending=[True,False])
@@ -64,7 +63,7 @@ class Stats:
         defen = defen._append(forward)
         defen = defen._append(goalkeepers)
 
-        defen.to_excel("files/mejoresjugadores.xlsx","Hoja1")
+        defen.to_csv("files/mejoresjugadores.csv",index=True)
     
     @staticmethod
     def saveAllPlayer(data:list):

@@ -53,12 +53,14 @@ class Main:
             dictplayers["team"] = player[0]
             dictplayers["name"] = player[1]
             dictplayers["position"] = player[2]
-            dictplayers.update(Stats.analyse(player[3]))
+            dictplayers["price_trend"] = player[3]
+            dictplayers.update(Stats.analyse(player[4]))
             predf.append(dictplayers)
             dictplayers = {}
-        
-        Stats.excel(predf)
-        Stats.saveAllPlayer(predf)
+
+        Stats.saveBestPlayersCsv(predf)
+        Stats.querys(predf)
+        #Stats.saveAllPlayer(predf)
         
 if __name__ == "__main__":
     Main.main()
