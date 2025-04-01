@@ -1,0 +1,290 @@
+[
+  [
+    "Rayo Vallecano",
+    {
+      "{'equipo_local': 'Rayo Vallecano', 'equipo_visitante': 'Espanyol'}": -0.06666666666666671
+    },
+    {
+      "{'equipo_local': 'Athletic', 'equipo_visitante': 'Rayo Vallecano'}": -0.2
+    },
+    {
+      "{'equipo_local': 'Rayo Vallecano', 'equipo_visitante': 'Valencia'}": -0.2
+    }
+  ],
+  [
+    "Espanyol",
+    {
+      "{'equipo_local': 'Rayo Vallecano', 'equipo_visitante': 'Espanyol'}": 0.06666666666666671
+    },
+    {
+      "{'equipo_local': 'Celta', 'equipo_visitante': 'Espanyol'}": -0.33333333333333326
+    },
+    {
+      "{'equipo_local': 'Espanyol', 'equipo_visitante': 'Getafe'}": 0.0
+    },
+    {
+      "{'equipo_local': 'Valencia', 'equipo_visitante': 'Espanyol'}": -0.1333333333333333
+    }
+  ],
+  [
+    "Girona",
+    {
+      "{'equipo_local': 'Girona', 'equipo_visitante': 'Deportivo Alavés'}": -0.1333333333333333
+    },
+    {
+      "{'equipo_local': 'Osasuna', 'equipo_visitante': 'Girona'}": 0.06666666666666668
+    },
+    {
+      "{'equipo_local': 'Girona', 'equipo_visitante': 'Real Betis'}": -0.8
+    },
+    {
+      "{'equipo_local': 'Leganés', 'equipo_visitante': 'Girona'}": 0.0
+    }
+  ],
+  [
+    "Deportivo Alavés",
+    {
+      "{'equipo_local': 'Girona', 'equipo_visitante': 'Deportivo Alavés'}": 0.1333333333333333
+    },
+    {
+      "{'equipo_local': 'Deportivo Alavés', 'equipo_visitante': 'Real Madrid'}": -0.46666666666666673
+    },
+    {
+      "{'equipo_local': 'Sevilla', 'equipo_visitante': 'Deportivo Alavés'}": 0.0
+    },
+    {
+      "{'equipo_local': 'Deportivo Alavés', 'equipo_visitante': 'Real Sociedad'}": -0.13333333333333336
+    }
+  ],
+  [
+    "Real Madrid",
+    {
+      "{'equipo_local': 'Real Madrid', 'equipo_visitante': 'Valencia'}": 0.2666666666666667
+    },
+    {
+      "{'equipo_local': 'Deportivo Alavés', 'equipo_visitante': 'Real Madrid'}": 0.46666666666666673
+    },
+    {
+      "{'equipo_local': 'Real Madrid', 'equipo_visitante': 'Athletic'}": 0.2666666666666667
+    },
+    {
+      "{'equipo_local': 'Getafe', 'equipo_visitante': 'Real Madrid'}": 0.4
+    }
+  ],
+  [
+    "Valencia",
+    {
+      "{'equipo_local': 'Real Madrid', 'equipo_visitante': 'Valencia'}": -0.2666666666666667
+    },
+    {
+      "{'equipo_local': 'Valencia', 'equipo_visitante': 'Sevilla'}": 0.2
+    },
+    {
+      "{'equipo_local': 'Rayo Vallecano', 'equipo_visitante': 'Valencia'}": 0.2
+    },
+    {
+      "{'equipo_local': 'Valencia', 'equipo_visitante': 'Espanyol'}": 0.1333333333333333
+    }
+  ],
+  [
+    "Mallorca",
+    {
+      "{'equipo_local': 'Mallorca', 'equipo_visitante': 'Celta'}": -0.33333333333333326
+    },
+    {
+      "{'equipo_local': 'Real Sociedad', 'equipo_visitante': 'Mallorca'}": -0.06666666666666665
+    },
+    {
+      "{'equipo_local': 'Mallorca', 'equipo_visitante': 'Leganés'}": 0.2
+    }
+  ],
+  [
+    "Celta",
+    {
+      "{'equipo_local': 'Mallorca', 'equipo_visitante': 'Celta'}": 0.33333333333333326
+    },
+    {
+      "{'equipo_local': 'Celta', 'equipo_visitante': 'Espanyol'}": 0.33333333333333326
+    },
+    {
+      "{'equipo_local': 'Barcelona', 'equipo_visitante': 'Celta'}": -0.2666666666666667
+    },
+    {
+      "{'equipo_local': 'Celta', 'equipo_visitante': 'Villarreal'}": 0.2666666666666666
+    }
+  ],
+  [
+    "Barcelona",
+    {
+      "{'equipo_local': 'Barcelona', 'equipo_visitante': 'Real Betis'}": 0.0
+    },
+    {
+      "{'equipo_local': 'Leganés', 'equipo_visitante': 'Barcelona'}": 0.8
+    },
+    {
+      "{'equipo_local': 'Barcelona', 'equipo_visitante': 'Celta'}": 0.2666666666666667
+    }
+  ],
+  [
+    "Real Betis",
+    {
+      "{'equipo_local': 'Barcelona', 'equipo_visitante': 'Real Betis'}": 0.0
+    },
+    {
+      "{'equipo_local': 'Real Betis', 'equipo_visitante': 'Villarreal'}": 0.5333333333333333
+    },
+    {
+      "{'equipo_local': 'Girona', 'equipo_visitante': 'Real Betis'}": 0.8
+    },
+    {
+      "{'equipo_local': 'Real Betis', 'equipo_visitante': 'Real Valladolid'}": 0.9333333333333333
+    }
+  ],
+  [
+    "UD Las Palmas",
+    {
+      "{'equipo_local': 'UD Las Palmas', 'equipo_visitante': 'Real Sociedad'}": -0.26666666666666666
+    },
+    {
+      "{'equipo_local': 'Getafe', 'equipo_visitante': 'UD Las Palmas'}": -0.2
+    },
+    {
+      "{'equipo_local': 'UD Las Palmas', 'equipo_visitante': 'Atlético'}": -0.26666666666666666
+    },
+    {
+      "{'equipo_local': 'Athletic', 'equipo_visitante': 'UD Las Palmas'}": -0.3333333333333333
+    }
+  ],
+  [
+    "Real Sociedad",
+    {
+      "{'equipo_local': 'UD Las Palmas', 'equipo_visitante': 'Real Sociedad'}": 0.26666666666666666
+    },
+    {
+      "{'equipo_local': 'Real Sociedad', 'equipo_visitante': 'Mallorca'}": 0.06666666666666665
+    },
+    {
+      "{'equipo_local': 'Villarreal', 'equipo_visitante': 'Real Sociedad'}": 0.0
+    },
+    {
+      "{'equipo_local': 'Deportivo Alavés', 'equipo_visitante': 'Real Sociedad'}": 0.13333333333333336
+    }
+  ],
+  [
+    "Sevilla",
+    {
+      "{'equipo_local': 'Sevilla', 'equipo_visitante': 'Atlético'}": -0.13333333333333336
+    },
+    {
+      "{'equipo_local': 'Valencia', 'equipo_visitante': 'Sevilla'}": -0.2
+    },
+    {
+      "{'equipo_local': 'Sevilla', 'equipo_visitante': 'Deportivo Alavés'}": 0.0
+    },
+    {
+      "{'equipo_local': 'Osasuna', 'equipo_visitante': 'Sevilla'}": 0.19999999999999998
+    }
+  ],
+  [
+    "Atlético",
+    {
+      "{'equipo_local': 'Sevilla', 'equipo_visitante': 'Atlético'}": 0.13333333333333336
+    },
+    {
+      "{'equipo_local': 'Atlético', 'equipo_visitante': 'Real Valladolid'}": 0.4
+    },
+    {
+      "{'equipo_local': 'UD Las Palmas', 'equipo_visitante': 'Atlético'}": 0.26666666666666666
+    }
+  ],
+  [
+    "Real Valladolid",
+    {
+      "{'equipo_local': 'Real Valladolid', 'equipo_visitante': 'Getafe'}": -0.33333333333333337
+    },
+    {
+      "{'equipo_local': 'Atlético', 'equipo_visitante': 'Real Valladolid'}": -0.4
+    },
+    {
+      "{'equipo_local': 'Real Valladolid', 'equipo_visitante': 'Osasuna'}": -0.06666666666666667
+    },
+    {
+      "{'equipo_local': 'Real Betis', 'equipo_visitante': 'Real Valladolid'}": -0.9333333333333333
+    }
+  ],
+  [
+    "Getafe",
+    {
+      "{'equipo_local': 'Real Valladolid', 'equipo_visitante': 'Getafe'}": 0.33333333333333337
+    },
+    {
+      "{'equipo_local': 'Getafe', 'equipo_visitante': 'UD Las Palmas'}": 0.2
+    },
+    {
+      "{'equipo_local': 'Espanyol', 'equipo_visitante': 'Getafe'}": 0.0
+    },
+    {
+      "{'equipo_local': 'Getafe', 'equipo_visitante': 'Real Madrid'}": -0.4
+    }
+  ],
+  [
+    "Villarreal",
+    {
+      "{'equipo_local': 'Villarreal', 'equipo_visitante': 'Athletic'}": -0.06666666666666665
+    },
+    {
+      "{'equipo_local': 'Real Betis', 'equipo_visitante': 'Villarreal'}": -0.5333333333333333
+    },
+    {
+      "{'equipo_local': 'Villarreal', 'equipo_visitante': 'Real Sociedad'}": 0.0
+    },
+    {
+      "{'equipo_local': 'Celta', 'equipo_visitante': 'Villarreal'}": -0.2666666666666666
+    }
+  ],
+  [
+    "Athletic",
+    {
+      "{'equipo_local': 'Villarreal', 'equipo_visitante': 'Athletic'}": 0.06666666666666665
+    },
+    {
+      "{'equipo_local': 'Athletic', 'equipo_visitante': 'Rayo Vallecano'}": 0.2
+    },
+    {
+      "{'equipo_local': 'Real Madrid', 'equipo_visitante': 'Athletic'}": -0.2666666666666667
+    },
+    {
+      "{'equipo_local': 'Athletic', 'equipo_visitante': 'UD Las Palmas'}": 0.3333333333333333
+    }
+  ],
+  [
+    "Leganés",
+    {
+      "{'equipo_local': 'Leganés', 'equipo_visitante': 'Osasuna'}": 0.06666666666666668
+    },
+    {
+      "{'equipo_local': 'Leganés', 'equipo_visitante': 'Barcelona'}": -0.8
+    },
+    {
+      "{'equipo_local': 'Mallorca', 'equipo_visitante': 'Leganés'}": -0.2
+    },
+    {
+      "{'equipo_local': 'Leganés', 'equipo_visitante': 'Girona'}": 0.0
+    }
+  ],
+  [
+    "Osasuna",
+    {
+      "{'equipo_local': 'Leganés', 'equipo_visitante': 'Osasuna'}": -0.06666666666666668
+    },
+    {
+      "{'equipo_local': 'Osasuna', 'equipo_visitante': 'Girona'}": -0.06666666666666668
+    },
+    {
+      "{'equipo_local': 'Real Valladolid', 'equipo_visitante': 'Osasuna'}": 0.06666666666666667
+    },
+    {
+      "{'equipo_local': 'Osasuna', 'equipo_visitante': 'Sevilla'}": -0.19999999999999998
+    }
+  ]
+]

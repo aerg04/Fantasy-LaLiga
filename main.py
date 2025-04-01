@@ -60,6 +60,7 @@ class Main:
 
         Stats.saveBestPlayersCsv(predf)
         Stats.querys(predf)
+        Scrap.getPredictions()
         #Stats.saveAllPlayer(predf)
         
 if __name__ == "__main__":

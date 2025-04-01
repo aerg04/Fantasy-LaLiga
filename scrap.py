@@ -252,4 +252,4 @@ class Scrap:
             f.write(json.dumps(output,indent=2,ensure_ascii=False))
 
 if __name__ == "__main__":
-    print(Scrap.getPlayersInfo("https://www.futbolfantasy.com/jugadores/diego-lopez-1"))
+    Scrap.getPredictions()
